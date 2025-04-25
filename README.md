@@ -45,15 +45,35 @@ Monitored Security Onion for new alerts. Detected check-ins from Remcos RAT orig
 ### 2. C2 Communication and File Downloads
 Observed HTTP requests to suspicious external IPs serving executables: `test1.exe` and `f4.exe`.
 
-![Payload Download](ss/file-downloads.png)
-> **Figure 2:** Malicious file download activity and command-and-control check-ins.
+![Payload Download](ss/Test.png)
+> **Figure 3:** Malicious file download activity and command-and-control check-ins.
+
+
+![Payload Download](ss/Test.png)
+> **Figure 4:** Malicious file download activity and command-and-control check-ins.
+
+
+![Payload Download](ss/F4.png)
+> **Figure 5:** Malicious file download activity and command-and-control check-ins.
+
+
+The test1.exe revealed to be a spyware trojan
+
+![Payload Download](ss/Tes_Talos.png)
+> **Figure 5:** Malicious file download activity and command-and-control check-ins.
+
+
+The F4.exe revealed to be a dridex
+
+![Payload Download](ss/F4_Talos.png)
+> **Figure 5:** Malicious file download activity and command-and-control check-ins.
 
 ---
 
 ### 3. Lateral Movement and SMB Activity
 Detected SMB-based access to domain controller `10.0.90.9`. Accessed critical shares and SYSVOL folder containing group policy data.
 
-![SMB Lateral Movement](images/smb-lateral-movement.png)
+![SMB Lateral Movement](ss/SMB_Sum.png)
 > **Figure 3:** Unauthorized access to domain controller via SMB protocol.
 
 ---
@@ -65,18 +85,11 @@ Documented the full infection flow from download to internal propagation:
 - RAT check-in at 01:47 UTC  
 - Lateral movement initiated at 01:50 UTC
 
-![Attack Timeline](images/attack-flow.png)
-> **Figure 4:** Timeline of malware activity and escalation.
-
 ---
 
 ### 5. Reporting and Recommendations
 Compiled all Indicators of Compromise (IoCs), attack flow, and system behaviors. Recommended isolating the infected host, resetting credentials, and scanning for persistence on domain controller and high-risk hosts.
 
-![Summary Report](images/incident-summary.png)
-> **Figure 5:** Incident summary and remediation proposal.
-
----
 
 > _"From detection to containment — every alert tells a story."_
 
