@@ -6,7 +6,7 @@ During the investigation, I used Sguil and Kibana to analyze alert patterns, fil
 
 Further analysis uncovered indicators of Dridex malware, pointing to a multi-stage attack leveraging remote administration tools and internal network exploitation for persistence and data exfiltration. My findings were documented as part of a complete incident response workflow using open-source tools.
 
-> 📄 [View Full Report (PDF)](main/Remcos-RAT-Incident-Response.pdf)
+> 📄 [View Full Report (PDF)](main/SECURITY_ONION_INCIDENT_RESPONSE.pdf)
 
 ## Project Highlights
 - Identified Remcos RAT activity using Security Onion alerts.
@@ -33,7 +33,7 @@ Further analysis uncovered indicators of Dridex malware, pointing to a multi-sta
 ### 1. Initial Detection
 Monitored Security Onion for new alerts. Detected check-ins from Remcos RAT originating from host `10.0.90.215`.
 
-![Initial Detection](images/remcos-alerts.png)
+![Initial Detection](ss/infection.png)
 > **Figure 1:** Alerts showing Remcos RAT behavior in Sguil and Kibana.
 
 ---
@@ -41,7 +41,7 @@ Monitored Security Onion for new alerts. Detected check-ins from Remcos RAT orig
 ### 2. C2 Communication and File Downloads
 Observed HTTP requests to suspicious external IPs serving executables: `test1.exe` and `f4.exe`. Established outbound connection to C2 at `103.1.184.108`.
 
-![Payload Download](images/file-downloads.png)
+![Payload Download](ss/file-downloads.png)
 > **Figure 2:** Malicious file download activity and command-and-control check-ins.
 
 ---
