@@ -1,6 +1,5 @@
 # Remcos RAT Incident Response - Security Onion Analysis
 
-## Scenario
 In a simulated enterprise environment, I was assigned as a Tier 1 SOC analyst to investigate suspicious activity flagged by our Security Onion monitoring system. Initial alerts suggested the presence of Remcos RAT — a Remote Access Trojan commonly used in targeted attacks for surveillance, credential theft, and lateral movement.
 
 During the investigation, I used Sguil and Kibana to analyze alert patterns, file transfers, and lateral activity. The infected host (10.0.90.215) downloaded multiple payloads, established command-and-control (C2) communications, and attempted unauthorized access to a domain controller (10.0.90.9) via SMB shares.
