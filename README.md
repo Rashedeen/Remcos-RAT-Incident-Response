@@ -34,7 +34,7 @@ Further analysis uncovered indicators of Dridex malware, pointing to a multi-sta
 Monitored Security Onion for new alerts. Detected check-ins from Remcos RAT originating from host `10.0.90.215`.
 
 ![Initial Detection](ss/infection.png)
-> **Figure 1:** Alerts showing Remcos RAT behavior in Sguil and Kibana.
+> **Figure 1:** Intial Connection Alerts.
 
 ---
 
